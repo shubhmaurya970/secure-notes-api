@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- AUTH BOX -->
+    <div id="authBox" class="card">
+        <h2>🔐 Secure Notes</h2>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+        <button class="secondary" onclick="signup()">Create Account</button>
+
+        <p id="authMsg" class="error"></p>
+    </div>
+
+    <!-- NOTES BOX -->
+    <div id="notesBox" class="card hidden">
+        <div class="top">
+            <h2>📝 My Notes</h2>
+            <button class="logout" onclick="logout()">Logout</button>
+        </div>
+
+        <input type="text" id="title" placeholder="Note title">
+        <textarea id="description" placeholder="Note description"></textarea>
+        <button onclick="addNote()">Add Note</button>
+
+        <ul id="notesList"></ul>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

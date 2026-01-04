@@ -1,0 +1,90 @@
+body {
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 420px;
+    margin: 60px auto;
+}
+
+.card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.secondary {
+    background: #16a34a;
+}
+
+button.logout {
+    background: #dc2626;
+    width: auto;
+    padding: 6px 12px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #1f2933;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+li button {
+    background: #dc2626;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: #f87171;
+    text-align: center;
+    margin-top: 10px;
+}
