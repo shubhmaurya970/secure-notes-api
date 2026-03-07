@@ -1,17 +1,13 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import os
-from dotenv import load_dotenv
+from models import Base
 
-load_dotenv()
+DATABASE_URL = "sqlite:///./secure_notes.db"
 
-DATABASE_URL = os.getenv("MYSQL_URL")
-
-if not DATABASE_URL:
-    raise RuntimeError("MYSQL_URL not found")
-
-engine = create_engine(DATABASE_URL)
-
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False}
+)
 
 SessionLocal = sessionmaker(
     autocommit=False,
