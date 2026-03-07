@@ -1,4 +1,4 @@
-const API = "";
+const API = window.location.origin;
 
 const authBox = document.getElementById("authBox");
 const notesBox = document.getElementById("notesBox");
