@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
