@@ -6,6 +6,8 @@ from schemas import NoteCreate, UserCreate, UserLogin
 from security import hash_password, verify_password
 from fastapi.middleware.cors import CORSMiddleware
 from auth import create_access_token, get_current_user
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 
 
@@ -21,6 +23,12 @@ app.add_middleware(
 
 
 # Base.metadata.create_all(bind=engine)
+
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
+
+@app.get("/")
+def read_index():
+    return FileResponse("frontend/index.html")
 
 @app.get("/")
 def view(db: Session = Depends(get_db)):
